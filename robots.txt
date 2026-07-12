@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pxrpxrx.github.io/darhan/sitemap.xml
