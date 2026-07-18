@@ -194,7 +194,7 @@ a { color: inherit; text-decoration: none; }
 .master-media { overflow: hidden; }
 .master-media img { width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 3/4; object-position: top center; }
 .master-card:first-child .master-media img { transform: scale(1); }
-.master-card:last-child .master-media img { transform: scale(1.08); }
+.master-card:last-child .master-media img { transform: scale(1.08); object-position: center 22%; }
 .master-text { padding: 28px 30px 30px; display: flex; flex-direction: column; }
 .master .kicker { color: var(--gold-soft); font-size: .82rem; letter-spacing: .08em; text-transform: uppercase; }
 .master .section-title { color: var(--white); }
