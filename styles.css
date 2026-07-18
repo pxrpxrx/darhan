@@ -185,16 +185,25 @@ a { color: inherit; text-decoration: none; }
 
 /* ============ MASTER ============ */
 .master { background: linear-gradient(180deg, var(--indigo) 0%, var(--indigo-deep) 100%); color: var(--white); }
-.master-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 60px; align-items: center; }
-.master .kicker { color: var(--gold-soft); }
-.master .section-title { color: var(--white); }
-.master-media img { border-radius: var(--r); box-shadow: var(--shadow); aspect-ratio: 4/5; object-fit: cover; border: 1px solid rgba(201,162,75,.4); }
-.master-text .lead { color: var(--cream); }
-.master-text p { color: rgba(245, 239, 225, .82); margin-bottom: 16px; }
-.master-quote {
-  font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.25rem;
-  color: var(--gold-soft); border-left: 2px solid var(--gold); padding-left: 18px; margin: 24px 0 30px;
+.masters { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
+.master-card {
+  background: rgba(255,255,255,.04); border: 1px solid rgba(201,162,75,.25); border-radius: var(--r);
+  overflow: hidden; display: grid; grid-template-columns: 240px 1fr; transition: transform .45s var(--ease), box-shadow .45s var(--ease);
 }
+.master-card:hover { transform: translateY(-6px); box-shadow: 0 30px 60px -26px rgba(0,0,0,.45); }
+.master-media { overflow: hidden; }
+.master-media img { width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 3/4; }
+.master-text { padding: 28px 30px 30px; display: flex; flex-direction: column; }
+.master .kicker { color: var(--gold-soft); font-size: .82rem; letter-spacing: .08em; text-transform: uppercase; }
+.master .section-title { color: var(--white); }
+.master-name { font-family: 'Playfair Display', serif; font-size: 1.45rem; color: var(--white); margin: 6px 0 10px; }
+.master-text .lead { color: var(--cream); font-size: 1rem; margin-bottom: 10px; }
+.master-text p { color: rgba(245, 239, 225, .82); font-size: .92rem; line-height: 1.6; margin-bottom: 12px; }
+.master-quote {
+  font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.05rem;
+  color: var(--gold-soft); border-left: 2px solid var(--gold); padding-left: 16px; margin: 18px 0 22px; line-height: 1.5;
+}
+.master-text .btn { margin-top: auto; align-self: flex-start; }
 
 /* ============ SERVICES ============ */
 .services { background: var(--cream-2); }
@@ -302,7 +311,9 @@ a { color: inherit; text-decoration: none; }
 
 /* ============ RESPONSIVE ============ */
 @media (max-width: 920px) {
-  .about-grid, .master-grid, .contacts-grid { grid-template-columns: 1fr; gap: 40px; }
+  .about-grid, .masters, .contacts-grid { grid-template-columns: 1fr; gap: 40px; }
+  .master-card { grid-template-columns: 1fr; }
+  .master-media img { aspect-ratio: 16/9; max-height: 320px; }
   .cards { grid-template-columns: repeat(2, 1fr); }
   .why-grid { grid-template-columns: repeat(2, 1fr); }
   .nav-links { display: none; }
